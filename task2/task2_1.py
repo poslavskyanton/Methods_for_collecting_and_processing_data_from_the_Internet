@@ -56,4 +56,4 @@ if __name__ == '__main__':
         list_vacancies = information_about_job_vacancies(name_job, page_site)
         pprint(list_vacancies)
         with open('data_task2_1.json', 'w') as f:
-            json.dump(list_vacancies), f)
+            json.dump(list_vacancies, f)
