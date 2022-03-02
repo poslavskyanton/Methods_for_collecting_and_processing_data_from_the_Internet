@@ -114,7 +114,6 @@ if __name__ == '__main__':
     client = MongoClient('127.0.0.1', 27017)
     db = client['news_db']
     news = db.news
-    news.drop()
     add_inform_to_db(info_topnews_from_lenta_ru() + info_topnews_from_news_mail_ru(), news)
     for doc in news.find({}):
         pprint(doc)
